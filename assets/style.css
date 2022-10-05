@@ -2,6 +2,7 @@
 font-family: 'Open Sans', sans-serif; */
 :root{
     --primary-color: #0A1128;
+    --light-gray-color: #eee;
     --white-color: white;
     --gap: 3rem;
 }
@@ -41,4 +42,50 @@ h4{font-size: 4.5rem;} h5{font-size: 4rem;} h6{font-size: 3.5rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: var(--gap);
+}
+.menu{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    border-bottom: 0.1rem solid var(--light-gray-color);
+}
+.menu-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.menu-content h1{
+    font-size: 2.3rem;
+    color: var(--primary-color);
+    padding: 0 2rem;
+}
+.menu nav ul{
+    display: flex;
+}
+.menu nav ul li a{
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+.menu nav ul li a:after{
+    content: "";
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0%;
+    height: 0.2rem;
+    background: crimson;
+    transition: all 300ms ease-in-out;
+}
+.menu nav ul li a:hover:after{
+    left: 25%;
+    width: 50%;
+}
+.menu-spacing{
+    height: 63px;
 }
