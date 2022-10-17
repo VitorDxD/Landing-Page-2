@@ -15,6 +15,7 @@ font-family: 'Open Sans', sans-serif; */
 }
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 body{
     font-family: 'Open Sans', sans-serif;
@@ -24,8 +25,21 @@ body{
 h1, h2, h3, h4, h5, h6{
     font-family: 'Montserrat', sans-serif;
 }
-h1{font-size: 6rem;} h2{font-size: 5.5rem;} h3{font-size: 5rem;}
-h4{font-size: 4.5rem;} h5{font-size: 4rem;} h6{font-size: 3.5rem;
+h1{font-size: 6rem;} 
+h2{
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+} 
+h3{font-size: 5rem;} h4{font-size: 4.5rem;}
+h5{font-size: 4rem;} h6{font-size: 3.5rem;
+}
+p{
+    margin-bottom: 3rem;
+}
+a{
+    color: var(--primary-color);
 }
 .section{
     min-height: 100vh;
@@ -41,7 +55,7 @@ h4{font-size: 4.5rem;} h5{font-size: 4rem;} h6{font-size: 3.5rem;
     color: #0A1128;
 }
 .main-content{
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: 10rem var(--gap);
 }
@@ -105,14 +119,48 @@ h4{font-size: 4.5rem;} h5{font-size: 4rem;} h6{font-size: 3.5rem;
     flex-flow: column wrap;
     justify-content: center;
 }
-.intro-text-content h2{
-    font-size: 6rem;
-    margin-bottom: 5rem;
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-.intro-img img,
 .intro-img svg{
     max-height: 100%;
     height: auto;
+}
+.top3-content {
+    max-width: 64rem;
+    display: flex;
+    flex-flow: column wrap;
+    min-height: 100vh;
+    text-align: center;
+}
+.grid-one-content{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+}
+.grid-main-heading{
+    margin-bottom: 1rem;
+}
+.grid-description{
+    margin-bottom: 8rem;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+.grid h3{
+    font-size: 3rem;
+    position: relative;
+    padding-bottom: 3rem;
+    padding-left: 5rem;
+}
+.grid h3:before{
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
 }
