@@ -11,20 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
+    <input type="checkbox" id="close-menu" class="close-menu" role="button" aria-label="Close menu">
+    <label for="close-menu" class="close-menu-label" title="Close menu"></label>
+
     <aside class="menu">
         <div class="main-content menu-content">
             <h1>
-                <a href="#home">LOGO</a>
+                <a href="#home" onclick="getElementById('close-menu').checked = false">LOGO</a>
             </h1>
 
             <nav>
                 <ul>
-                    <li><a href="#intro">Intro</a></li>
-                    <li><a href="#grid-one">Grid-One</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#grid-two">Grid-Two</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#intro" onclick="getElementById('close-menu').checked = false">Intro</a></li>
+                    <li><a href="#grid-one" onclick="getElementById('close-menu').checked = false;">Grid-One</a></li>
+                    <li><a href="#gallery" onclick="getElementById('close-menu').checked = false;">Gallery</a></li>
+                    <li><a href="#grid-two" onclick="getElementById('close-menu').checked = false;">Grid-Two</a></li>
+                    <li><a href="#pricing" onclick="getElementById('close-menu').checked = false;">Pricing</a></li>
+                    <li><a href="#contact" onclick="getElementById('close-menu').checked = false;">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -144,7 +147,7 @@
             <h2>Pricing</h2>
             <p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news coverage and some surprises at the machine's performance. This post details some background information on the experience of porting Firefox to run natively on these CPUs.</p>
             <p>We'll start with some background on the Mac transition and give an overview of Firefox internals that needed to know about the new architecture, before moving on to the concept of Universal Binaries.</p>
-            <div class="resnposive-table">
+            <div class="responsive-table">
                 <table>
                     <caption>Pricing table</caption>
                     <thead>
@@ -231,5 +234,7 @@
             <img id="footer-img"  src="./assets/img/Github-icon.svg" alt="ícone github">
         </a>
     </footer>
+
+    <a class="back-to-top" href="#">➤</a>
 </body>
 </html>
